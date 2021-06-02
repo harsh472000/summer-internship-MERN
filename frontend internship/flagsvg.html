@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <script>
+        function createSpoke(i, x1, y1, x, y) {
+            var svgNS = "http://www.w3.org/2000/svg";
+            var spoke = document.createElementNS(svgNS, "line");
+            spoke.setAttributeNS(null, "id", i);
+            spoke.setAttributeNS(null, "x1", x1);
+            spoke.setAttributeNS(null, "y1", y1);
+            spoke.setAttributeNS(null, "x2", x);
+            spoke.setAttributeNS(null, "y2", y);
+
+            document.getElementById("TricolorSVG").appendChild(spoke);
+        }
+        function drawSpokes() {
+            var x1 = 225, y1 = 160, theta = 15, r = 49;
+            for (var i = 0; i < 24; i++) {
+                theta = theta * i * Math.PI / 180;
+                x = x1 + r * Math.cos(theta);
+                y = y1 + r * Math.sin(theta);
+                createSpoke(i, x1, y1, x, y);
+                theta = 15;
+            }
+        }
+    </script>
+</head>
+
+<body onload="drawSpokes();">
+
+    <div class="container">
+        <div class="flag">
+            <svg id="TricolorSVG" width="800" height="640">
+                <!-- Draw rects -->
+                <rect x="10" y="10" width="450" height="100" style="fill:orange" id="first" />
+                <rect x="10" y="110" width="450" height="100" style="fill:white" />
+                <rect x="10" y="210" width="450" height="100" style="fill:green" />
+
+                <!-- Draw wheel -->
+                <circle cx="225" cy="160" style="stroke:blue;fill:none" r="50" id="wheels" />
+
+                <!--Draw text-->
+                <!--<text x="500", y="100">Happy</text>
+        <text x="500", y="160">Republic</text>
+        <text x="500", y="220">Day!</text>-->
+            </svg>
+        </div>
+    </div>
+</body>
+
+</html>

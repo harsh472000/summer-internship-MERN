@@ -1,0 +1,101 @@
+svg {
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
+    }
+text {
+	fill:#999999; stroke:#000000; font-size:48px
+}
+line {
+	stroke:blue;
+}
+/*#wheels{
+	animation: wh 5s infinite linear;
+	transform-origin:center;
+	transform-box:fill-box;
+}
+@keyframes wh{
+	from{
+		transform:rotateZ(0);
+	}
+	to{
+		transform:rotateZ(360deg);
+	}
+}
+#first,#second,#third{
+	animation: par1 1s ease-in-out infinite alternate;
+	transform-origin: bottom;
+}
+
+@keyframes par1{
+	from{
+		transform: rotateX(0deg);
+	}
+	to{
+		transform: rotateX(15deg);
+		/* transform: rotateY(5deg);
+		transform: rotateZ(5deg); 
+	}
+}*/
+
+/*#wheels{
+	animation: par2 1s ease-in-out infinite alternate;
+	transform-origin: bottom;
+}
+
+@keyframes par2{
+	from{
+		transform: rotateX(0deg);
+	}
+	to{
+		/*transform: rotateX(30deg);
+		transform: rotateY(5deg);
+		transform: rotateZ(5deg);
+	}
+}*/
+
+.flex-container > div {
+                
+                margin: 10px;
+                padding: 20px;
+                font-size: 30px;
+                }
+                .flag svg rect:nth-child(1)
+                {
+                    animation: wave 1s ease-in-out infinite;
+                    /* animation: wave01 1s ease-in-out infinite; */
+                }
+                
+                .flag svg rect:nth-child(3)
+                {
+                    animation: wave3 1.1s ease-in-out infinite;
+                }            
+             @keyframes wave {
+                 0%,100%
+                 {
+                    clip-path: polygon(
+                        0 0, 15% 11%, 39% 16%, 56% 8%, 81% 5%, 100% 14%, 100% 100%, 0 100%
+                    );
+                 }
+                 50%{
+                     clip-path: polygon(0 14%, 19% 4%, 42% 11%, 61% 17%, 83% 9%, 100% 0, 100% 100%, 0 100%
+                     );
+                 }
+
+                
+                 
+             }
+              @keyframes wave3 {
+                 0%,100%
+                 {
+                    clip-path: polygon(
+                        0 88%, 24% 97%, 46% 93%, 66% 88%, 86% 90%, 100% 100%, 100% 0%, 0% 0%
+                        
+                    );
+                 }
+                 50%{
+                     clip-path: polygon(0 100%, 18% 94%, 36% 89%, 55% 90%, 79% 95%, 100% 90%, 100% 0%, 0% 0%
+                     );
+                 }
+                 
+             }
