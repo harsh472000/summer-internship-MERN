@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox challange 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            display: grid;
+            background-color: blue;
+        }
+        ul{
+            display: inline-grid;
+            grid-template-columns :75px 75px 150px auto;
+        }
+        li{
+            list-style: none;
+            margin: 0 23px;
+            padding: 22px 0;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 500px 500px;
+            grid-gap: 200px;
+            justify-content: space-between;
+        }
+        .box1{
+            background-color: brown;
+            height:50vh;
+        }
+        .box2{
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- create header with content using css grid-->
+    <header>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Projects</li>
+                <li>contact us</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="box1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem laborum, reiciendis natus consectetur enim quas vitae repellat distinctio consequatur porro perspiciatis incidunt facilis quisquam tenetur repellendus asperiores explicabo quia dolorum.
+        </div>
+        <div class="box2">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste, quis porro officiis assumenda voluptate voluptatem nesciunt accusamus, tenetur perferendis ullam fugiat unde, expedita error iure reprehenderit aliquid exercitationem necessitatibus magnam.
+        </div>
+    </div>
+</body>
+</html>
